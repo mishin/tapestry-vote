@@ -4,15 +4,17 @@
 	<!-- Most of the page content, including <head>, <body>, etc. tags, comes
 		from Layout.tml -->
 	<ul>
-		<t:loop t:source="items" t:value="item">
-			<li>
-				<t:actionlink t:id="vote" context="item">+</t:actionlink>
-				${item.votes}
-				<a href="${item.url}">${item.title}</a>
-			</li>
-		</t:loop>
+		<t:zone t:id="listZone" elementName="div">
+			<t:loop t:source="items" t:value="item">
+				<li>
+					<t:actionlink zone="listZone" t:id="vote" context="item">+</t:actionlink>
+					${item.votes}
+					<a href="${item.url}">${item.title}</a>
+				</li>
+			</t:loop>
+		</t:zone>
 	</ul>
-	<t:beaneditform object="newItem"></t:beaneditform>
+	<t:beaneditform t:id="form" object="newItem"></t:beaneditform>
 
 	<!-- Main hero unit for a primary marketing message or call to action -->
 	<div class="hero-unit">

@@ -1,0 +1,134 @@
+EXCEPTION STACK:
+
+
+        Exception: org.apache.tapestry5.ioc.internal.OperationException
+          Message: Component Index does not contain embedded component 'beaneditform'.
+            trace: Handling traditional 'action' component event request for Index:beaneditform.form.
+
+        Exception: org.apache.tapestry5.ioc.util.UnknownValueException
+          Message: Component Index does not contain embedded component 'beaneditform'.
+  availableValues: AvailableValues[Embedded components: eventlink, eventlink_0, form, layout, learnmore, loop, middlezone, vote]
+
+  Stack trace:
+
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.getEmbeddedElement(ComponentPageElementImpl.java:854)
+  - org.apache.tapestry5.internal.structure.PageImpl.getComponentElementByNestedId(PageImpl.java:143)
+  - org.apache.tapestry5.internal.services.ComponentEventRequestHandlerImpl.handle(ComponentEventRequestHandlerImpl.java:71)
+  - org.apache.tapestry5.internal.services.AjaxFilter.handle(AjaxFilter.java:42)
+  - $ComponentEventRequestHandler_f688faf3f8e8.handle(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$37.handle(TapestryModule.java:2216)
+  - $ComponentEventRequestHandler_f688faf3f8e8.handle(Unknown Source)
+  - $ComponentEventRequestHandler_f688faf3f8e0.handle(Unknown Source)
+  - org.apache.tapestry5.internal.services.ComponentRequestHandlerTerminator.handleComponentEvent(ComponentRequestHandlerTerminator.java:43)
+  - org.apache.tapestry5.internal.services.DeferredResponseRenderer.handleComponentEvent(DeferredResponseRenderer.java:45)
+  - $ComponentRequestHandler_f688faf3f8e2.handleComponentEvent(Unknown Source)
+  - org.apache.tapestry5.services.InitializeActivePageName.handleComponentEvent(InitializeActivePageName.java:39)
+  - $ComponentRequestHandler_f688faf3f8e2.handleComponentEvent(Unknown Source)
+  - org.apache.tapestry5.internal.services.RequestOperationTracker$1.perform(RequestOperationTracker.java:55)
+  - org.apache.tapestry5.internal.services.RequestOperationTracker$1.perform(RequestOperationTracker.java:52)
+  - org.apache.tapestry5.ioc.internal.OperationTrackerImpl.perform(OperationTrackerImpl.java:110)
+  - org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.perform(PerThreadOperationTracker.java:84)
+  - org.apache.tapestry5.ioc.internal.RegistryImpl.perform(RegistryImpl.java:1266)
+  - org.apache.tapestry5.internal.services.RequestOperationTracker.handleComponentEvent(RequestOperationTracker.java:47)
+  - $ComponentRequestHandler_f688faf3f8e2.handleComponentEvent(Unknown Source)
+  - $ComponentRequestHandler_f688faf3f8a9.handleComponentEvent(Unknown Source)
+  - org.apache.tapestry5.internal.services.ComponentEventDispatcher.dispatch(ComponentEventDispatcher.java:48)
+  - $Dispatcher_f688faf3f8ab.dispatch(Unknown Source)
+  - $Dispatcher_f688faf3f89f.dispatch(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$RequestHandlerTerminator.service(TapestryModule.java:305)
+  - org.apache.tapestry5.internal.services.RequestErrorFilter.service(RequestErrorFilter.java:26)
+  - $RequestHandler_f688faf3f8a0.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$3.service(TapestryModule.java:846)
+  - $RequestHandler_f688faf3f8a0.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$2.service(TapestryModule.java:836)
+  - $RequestHandler_f688faf3f8a0.service(Unknown Source)
+  - org.apache.tapestry5.internal.services.StaticFilesFilter.service(StaticFilesFilter.java:89)
+  - $RequestHandler_f688faf3f8a0.service(Unknown Source)
+  - net.tap5.vote.services.AppModule$1.service(AppModule.java:113)
+  - $RequestFilter_f688faf3f89a.service(Unknown Source)
+  - $RequestHandler_f688faf3f8a0.service(Unknown Source)
+  - org.apache.tapestry5.internal.services.CheckForUpdatesFilter$2.invoke(CheckForUpdatesFilter.java:105)
+  - org.apache.tapestry5.internal.services.CheckForUpdatesFilter$2.invoke(CheckForUpdatesFilter.java:95)
+  - org.apache.tapestry5.ioc.internal.util.ConcurrentBarrier.withRead(ConcurrentBarrier.java:83)
+  - org.apache.tapestry5.internal.services.CheckForUpdatesFilter.service(CheckForUpdatesFilter.java:119)
+  - $RequestHandler_f688faf3f8a0.service(Unknown Source)
+  - $RequestHandler_f688faf3f894.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$HttpServletRequestHandlerTerminator.service(TapestryModule.java:256)
+  - org.apache.tapestry5.internal.gzip.GZipFilter.service(GZipFilter.java:59)
+  - $HttpServletRequestHandler_f688faf3f896.service(Unknown Source)
+  - org.apache.tapestry5.internal.services.IgnoredPathsFilter.service(IgnoredPathsFilter.java:62)
+  - $HttpServletRequestFilter_f688faf3f891.service(Unknown Source)
+  - $HttpServletRequestHandler_f688faf3f896.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$1.service(TapestryModule.java:796)
+  - $HttpServletRequestHandler_f688faf3f896.service(Unknown Source)
+  - $HttpServletRequestHandler_f688faf3f890.service(Unknown Source)
+  - org.apache.tapestry5.TapestryFilter.doFilter(TapestryFilter.java:166)
+  - org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1148)
+  - org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:387)
+  - org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+  - org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:181)
+  - org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:765)
+  - org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:417)
+  - org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230)
+  - org.mortbay.jetty.handler.HandlerCollection.handle(HandlerCollection.java:114)
+  - org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+  - org.mortbay.jetty.Server.handle(Server.java:324)
+  - org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:535)
+  - org.mortbay.jetty.HttpConnection$RequestHandler.content(HttpConnection.java:880)
+  - org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:747)
+  - org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:218)
+  - org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+  - org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:409)
+  - org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:520)
+
+REQUEST:
+
+Basic Information:
+
+                contextPath: /vote
+                     method: POST
+                       path: /index.beaneditform.form
+                     locale: ru
+                 serverName: localhost
+                 remoteHost: 0:0:0:0:0:0:0:1
+
+Headers:
+
+                     Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+            Accept-Encoding: gzip, deflate
+            Accept-Language: ru,en;q=0.8
+              Cache-Control: max-age=0
+                 Connection: keep-alive
+             Content-Length: 717
+               Content-Type: application/x-www-form-urlencoded
+                     Cookie: JSESSIONID=85jt4QNkMoVBbLyGcEHxbTObUbdttwf1GbhsEa0LFqzJAkM7lnZ6!1166431689
+                       Host: localhost:8080
+                     Origin: http://localhost:8080
+                    Referer: http://localhost:8080/vote/
+  Upgrade-Insecure-Requests: 1
+                 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 YaBrowser/16.4.1.8564 Yowser/2.5 Safari/537.36
+
+Parameters:
+                 t:formdata: MEfgLYlBzlNHHUjABylYDPTcESU=:H4sIAAAAAAAAAFvzloG1XIZB0jMvJbXCKik1MS81JbMkLb8oVw/EyC9iKC5isMovStdLLEhMzkjVK0ksSC0uKao01UvOL0rNyUwC0rkF+XmpeSXFek5A/a5gbSoBRakFiUWp4QJ+3KsrtkkyMTBUFJQrMsjhtEgvJz+/AGSbHrG2+QA1qBh9KkjTdBdbbU8zG4wPaLR4GH9ZywCxQZtBA7cNBUX5BalFJZWIsHMn1q4AqFZo+AWnlpQWuOaVZRbl5+UCFXgJMhXeN9bXZWJg9GHggNlTwiDkk5VYlqifk5iXrh9cUpSZl25dUVDCwFqSWZKTWq7CoAiySh/ZcKec/OTsYquS1IqStMzUnBSQK03xujIpsThVzzEJKJiYXOIG0gNxnmroYe6Hosf/gN3EnZyfV1KUn+OXmJtayFDHwE6GMxxJdQbQwOTU4uLg0qTczOLizPy8w+tSTNK+zTtHVlx5khlXzjlA41FiKzdsX62Ch/hvmiVKE1KTPShKWEkLEJAWthIG5tKiHCJjEKSDixQdIA18JLkKpEOASP8KESzZXMko2TBjO97Xq/Nk7OcOcFwAAHN0GaZSBQAA
+                   t:submit: ["",""]
+                      title: 
+                        url: 
+
+SYSTEM INFORMATION:
+
+Memory:
+      167 168 704 bytes free
+      449 839 104 bytes total
+    3 791 650 816 bytes max
+
+10 Threads:
+                                                          Reference Handler WAITING, daemon, priority 10
+                                                                  Finalizer WAITING, daemon, priority 8
+                                                          Signal Dispatcher RUNNABLE, daemon, priority 9
+                                                            Attach Listener RUNNABLE, daemon
+                                                                       main WAITING
+  233343686@qtp-993452032-1 - Acceptor0 SelectChannelConnector@0.0.0.0:8080 RUNNABLE
+                                                                    Timer-0 TIMED_WAITING, daemon
+                                                     HSQLDB Timer @6ca16384 TIMED_WAITING, daemon
+                                                            pool-1-thread-1 TIMED_WAITING
+*                                               1794633554@qtp-993452032-20 RUNNABLE

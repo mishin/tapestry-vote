@@ -1,14 +1,19 @@
 package net.tap5.vote.pages;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Date;
 import java.util.List;
 
 import org.apache.tapestry5.Block;
 import org.apache.tapestry5.EventContext;
 import org.apache.tapestry5.SymbolConstants;
+import org.apache.tapestry5.annotations.Component;
 import org.apache.tapestry5.annotations.InjectPage;
 import org.apache.tapestry5.annotations.Log;
 import org.apache.tapestry5.annotations.Property;
+import org.apache.tapestry5.corelib.components.BeanEditForm;
+import org.apache.tapestry5.corelib.components.Zone;
 import org.apache.tapestry5.hibernate.annotations.CommitAfter;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.ioc.annotations.Symbol;
@@ -32,6 +37,12 @@ public class Index {
 
 	@Inject
 	private Session session;
+
+	@Component
+	private BeanEditForm form;
+
+	@Component
+	private Zone listZone;
 
 	@Inject
 	private Logger logger;
@@ -83,10 +94,19 @@ public class Index {
 		return session.createCriteria(Item.class).addOrder(Order.desc("votes")).list();
 	}
 
+	public void onValidate() {
+		try {
+			URL url = new URL(newItem.getUrl());
+		} catch (MalformedURLException e) {
+			form.recordError("Invalid URL");
+		}
+	}
+
 	@CommitAfter
-	public void onActionFromVote(Item i) {
+	public Object onActionFromVote(Item i) {
 		i.setVotes(i.getVotes() + 1);
 		session.persist(i);
+		return listZone.getBody();
 	}
 
 	public Date getCurrentTime() {

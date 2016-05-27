@@ -20,7 +20,6 @@ import org.slf4j.Logger;
 
 import net.tap5.vote.entities.Item;
 
-
 /**
  * Start page of application vote.
  */
@@ -75,14 +74,21 @@ public class Index {
 	}
 
 	@CommitAfter
-	public void onSuccess(){
+	public void onSuccess() {
 		session.persist(newItem);
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<Item> getItems(){
+	public List<Item> getItems() {
 		return session.createCriteria(Item.class).addOrder(Order.desc("votes")).list();
 	}
+
+	@CommitAfter
+	public void onActionFromVote(Item i) {
+		i.setVotes(i.getVotes() + 1);
+		session.persist(i);
+	}
+
 	public Date getCurrentTime() {
 		return new Date();
 	}

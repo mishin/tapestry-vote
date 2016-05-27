@@ -5,9 +5,11 @@
 		from Layout.tml -->
 	<ul>
 		<t:loop t:source="items" t:value="item">
-		<li>
-		${item.title}
-		</li>
+			<li>
+				<t:actionlink t:id="vote" context="item">+</t:actionlink>
+				${item.votes}
+				<a href="${item.url}">${item.title}</a>
+			</li>
 		</t:loop>
 	</ul>
 	<t:beaneditform object="newItem"></t:beaneditform>
@@ -24,11 +26,14 @@
 			<strong>${currentTime}</strong>
 		</p>
 		<p>
-			This is a template for a simple marketing or informational website. It
+			This is a template for a simple marketing or informational website.
+			It
 			includes a large callout called
-			the hero unit and three supporting pieces of content. Use it as a
+			the hero unit and three supporting
+			pieces of content. Use it as a
 			starting point to create something
-			more unique.
+			more
+			unique.
 		</p>
 		<p>
 			<t:actionlink t:id="learnmore" class="btn btn-primary btn-large">Learn

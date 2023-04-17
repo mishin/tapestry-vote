@@ -154,7 +154,7 @@
 	<properties>
 		<tapestry-release-version>5.4.1</tapestry-release-version>
 		<servlet-api-release-version>2.5</servlet-api-release-version>
-		<testng-release-version>6.8.21</testng-release-version>
+		<testng-release-version>7.7.0</testng-release-version>
 		<slf4j-release-version>1.7.19</slf4j-release-version>
 
 	</properties>
